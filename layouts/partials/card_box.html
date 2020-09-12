@@ -1,0 +1,56 @@
+<!--
+    Mandatory input values
+    - type ["box", "card"]
+    - title
+    - content
+
+    Optional input values
+    - size ["column-two", "column-three"]
+    - topImage or leftImage or rightImage (path)
+    - hover [true] (only usable with type "card")
+    - headerColored
+    - subTitle
+    - links (array of links)
+-->
+
+{{ $classes := .type }}
+{{ with .size }}{{ $classes = printf "%s %s" $classes . }}{{ end }}
+{{ if not (isset . "size") }}{{ $classes = printf "%s %s" $classes "column-one" }}{{ end }}
+
+{{ with .topImage }}{{ $classes = printf "%s %s" $classes "flex-direction-vertical" }}{{ end }}
+{{ with .leftImage }}{{ $classes = printf "%s %s" $classes "flex-direction-horizontal" }}{{ end }}
+{{ with .rightImage }}{{ $classes = printf "%s %s" $classes "flex-direction-horizontal-reverse" }}{{ end }}
+
+{{ if eq .type "card"}}
+    {{ with .hover }}{{ $classes = printf "%s %s" $classes "card-hover" }}{{ end }}
+{{ end }}
+
+{{ $headerClasses := "" }}
+{{ with .headerColored }}{{ $headerClasses = printf "header-colored %s" . }}{{ end }}
+
+<article class="{{ $classes }}">
+    {{ with .topImage }}<img src="{{ . }}" class="image-horizontal">{{ end }}
+    {{ with .leftImage }}<img src="{{ . }}" class="image-vertical image-vertical-left">{{ end }}
+    {{ with .rightImage }}<img src="{{ . }}" class="image-vertical image-vertical-right">{{ end }}
+    <div>
+        <header class="{{ $headerClasses }}">
+            {{ if isset . "size" }}
+                <h3>{{ .title }}</h3>
+            {{ else }}
+                <h1>{{ .title }}</h1>
+            {{ end }}
+        </header>
+        {{ with .subTitle }}<p class="sub-title">{{.}}</p>{{ end }}
+        {{ .content }}
+        {{ with .links }}
+            <div class="links">
+                <h4>Related links:</h4>
+                <ul>
+                    {{ range (sort .) }}
+                        <li><a href="{{ . }}">{{ . }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+        {{ end }}
+    </div>
+</article>

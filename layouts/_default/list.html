@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <div class="card flex-direction-vertical column-one">
+        <article>
+            <header>
+                <h1>{{.Title}}</h1>
+            </header>
+        </article>
+        <ul class="divided-list">
+            {{ range .Pages }}
+                <li>
+                    <a href="{{.Permalink}}">{{.Title}}</a>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+{{ end }}

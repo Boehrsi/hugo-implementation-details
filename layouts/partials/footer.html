@@ -1,0 +1,9 @@
+<footer>
+    <a href="#">Imprint</a>
+</footer>
+<!-- CSS -->
+{{ $style := resources.Get "scss/style.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/material-icons.css">
+<!-- JS -->
+<script type="text/javascript" src="{{ .Site.BaseURL }}/js/base.js"></script>

@@ -1,0 +1,15 @@
+<nav>
+  <div class="logo"><a href="{{ .Site.BaseURL }}">implementationDetails()</a></div>
+  <input type="checkbox" id="toggle-nav" onclick="toggleScrollingOnMobileNavigation()">
+  <label for="toggle-nav" class="toggle-nav-button">
+    <i class="material-icons">menu</i>
+  </label>
+  <ul>
+    <li><a href="{{ .Site.BaseURL }}/about">About</a></li>
+    <li><a href="{{ .Site.BaseURL }}/contribute">Contribute</a></li>
+    <li class="category-header">Categories</li>
+    {{ range .Site.Taxonomies.categories }}
+      <li class="category-entry"><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+    {{ end }}
+  </ul>
+</nav>

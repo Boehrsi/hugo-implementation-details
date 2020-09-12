@@ -1,0 +1,21 @@
+{{ define "main" }}
+    <div class="flex-center">
+        {{ partial "card_box.html" (dict "type" "card" "title" .Title "content" .Content) }}
+    </div>
+    <div class="card column-one">
+        <div>
+            <ul class="divided-list">
+                {{ range .Site.Taxonomies.categories }}
+                <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+                <ul>
+                    {{ range .Pages }}
+                        <li>
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+{{ end }}
