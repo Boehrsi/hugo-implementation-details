@@ -1,6 +1,6 @@
 # Implementation details
 
-A simple template for documentation and best practices websites for the [Hugo static site generator](https://gohugo.io/). It was created to provide a simple and minimalistic base for documentation or tips for developers.
+A simple theme for documentation and best practices websites for the [Hugo static site generator](https://gohugo.io/). It was created to provide a simple and minimalistic base for documentation or tips for developers.
 
 # Setup
 

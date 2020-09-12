@@ -1,7 +1,7 @@
 name = "Implementation Details"
 license = "MIT"
 licenselink = "https://github.com/Boehrsi/hugo-implementation-details/blob/master/LICENSE"
-description = "A simple template for documentation and best practices websites."
+description = "A simple theme for documentation and best practices websites."
 homepage = "https://github.com/Boehrsi/hugo-implementation-details"
 min_version = "0.70"
 tags = [
