@@ -20,6 +20,7 @@ A simple theme for documentation and best practices websites for the [Hugo stati
   - An entry is added by creating a **folder**
   - Within the entry folder at least the `index.md` file must exist
   - Additionally and optionally a `bad.md` and / or `good.md` could exist. If those files exist they are shown below the content of the `index.md` file. Those files are meant to show code examples only
+  - A new entry can be added via the Hugo CLI `hugo new --kind entry entries/my-post`
   
 # Examples
 
