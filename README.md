@@ -1,17 +1,17 @@
-# Implementation details
+# Implementation Details
 
 ![https://github.com/Boehrsi/hugo-implementation-details/blob/master/docs/screenshot.png](https://github.com/Boehrsi/hugo-implementation-details/blob/master/docs/screenshot.png)
 
 A simple theme for documentation and best practices websites for the [Hugo static site generator](https://gohugo.io/). It was created to provide a simple and minimalistic base for documentation or tips for developers.
 
-# Setup
+## Setup
 
 - Use **Hugo extended** 
 - Clone the repository into your `themes` directory in your Hugo project
 - Activate the theme in the config file (e.g. `config.toml`) of your Hugo project
 - You are ready to use it, no configuration or further setup is required
 
-# How to use
+## How to use
 
 - `content/_index.md` contains the home page
 - `content/about.md` contains the about page
@@ -22,11 +22,11 @@ A simple theme for documentation and best practices websites for the [Hugo stati
   - Additionally and optionally a `bad.md` and / or `good.md` could exist. If those files exist they are shown below the content of the `index.md` file. Those files are meant to show code examples only
   - A new entry can be added via the Hugo CLI `hugo new --kind entry entries/my-post`
   
-# Examples
+## Examples
 
 We create a folder `content/entries/awesome-article/` in our Hugo project, which contains the following three files.
 
-## content/entries/awesome-article/index.md
+### content/entries/awesome-article/index.md
 
 
     ---
@@ -40,7 +40,7 @@ We create a folder `content/entries/awesome-article/` in our Hugo project, which
     You shoud do it the right way!
 
 
-## content/entries/awesome-article/good.md
+### content/entries/awesome-article/good.md
 
     ---
     title: "Good is better"
@@ -52,7 +52,7 @@ We create a folder `content/entries/awesome-article/` in our Hugo project, which
     }
     ```
 
-## content/entries/awesome-article/bad.md
+### content/entries/awesome-article/bad.md
 
     ---
     title: "Bad is not good"
@@ -63,6 +63,6 @@ We create a folder `content/entries/awesome-article/` in our Hugo project, which
         // bad
     }
     ```
-# Resources 
+## Resources 
 
-- https://github.com/google/material-design-icons
+- Icons: https://github.com/google/material-design-icons
