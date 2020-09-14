@@ -12,7 +12,7 @@ $color_link_hover: #427eff;
 $header_height: 192px;
 $nav_height: 80px;
 $aside_width: 200px;
-$footer_padding: 48px;
+$footer_padding: 24px;
 $footer_height: 32px;
 $content_bottom_padding: ($footer_padding * 2) + $footer_height;
 $border_radius: 4px;
@@ -448,12 +448,15 @@ footer {
       padding: 10px 0px;
     }
   }
+  
   aside {
     display: none;
   }
+
   main {
     margin-left: 0;
   }
+
   footer {
     padding: $footer_padding;
   }
