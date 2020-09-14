@@ -132,6 +132,10 @@ nav {
   #toggle-nav {
     display: none;
   }
+
+  .toggled {
+    display: none;
+  }
 }
 
 .toggle-nav-button {
@@ -403,7 +407,7 @@ footer {
     ul {
       position: fixed;
       width: 100vw;
-      height: calc(100vh - $content_bottom_padding);
+      height: 100vh;
       background: $color_primary;
       left: -100vw;
       text-align: center;
@@ -429,7 +433,8 @@ footer {
     }
 
     .logo {
-      padding: 0px 50px;
+      padding: 0px 20px 0px 50px;
+      font-size: 1rem;
     }
 
     .category-header {
@@ -460,6 +465,10 @@ footer {
 
   #toggle-nav:checked ~ ul {
     left: 0;
+
+    .toggled {
+      display: inline-block;
+    }
   }
 
   .toggle-nav-button {
