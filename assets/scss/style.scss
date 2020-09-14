@@ -45,7 +45,7 @@ h3 {
 // Text
 p,
 pre {
-  line-height: 1.6em;
+  line-height: 1.6rem;
 }
 
 // Links
@@ -116,6 +116,7 @@ nav {
     font-family: "Courier New", Courier, monospace;
     line-height: $nav_height;
     padding: 0 $aside_width + 50;
+    font-size: 1.2rem;
 
     a {
       text-decoration: none;
@@ -269,7 +270,7 @@ footer {
   }
 
   ul li {
-    line-height: 1.6em;
+    line-height: 1.6rem;
   }
 
   .image-horizontal {
@@ -416,6 +417,7 @@ footer {
         margin: 0px;
         padding: 20px 0px;
         line-height: 30px;
+        font-size: 1.2rem;
         color: $color_white;
 
         a:hover,
