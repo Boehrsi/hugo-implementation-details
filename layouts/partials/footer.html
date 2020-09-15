@@ -1,5 +1,7 @@
 <footer>
-    <a href="#">Imprint</a>
+    {{ with .Site.Params.imprint }}
+        <a href="{{.}}">Imprint</a>
+    {{ end }}
 </footer>
 <!-- CSS -->
 {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}

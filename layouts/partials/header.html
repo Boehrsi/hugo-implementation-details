@@ -7,7 +7,9 @@
   <ul>
     <li><a href="{{ .Site.BaseURL }}/about">About</a></li>
     <li><a href="{{ .Site.BaseURL }}/contribute">Contribute</a></li>
-    <li><a href="https://github.com/Boehrsi/implementation-details-flutter">View on GitHub</a></li>
+    {{ with .Site.Params.github }}
+      <li><a href="{{.}}">View on GitHub</a></li>
+    {{ end }}
     <li class="toggled"><a href="#">Imprint</a></li>
     <li class="category-header">Categories</li>
     {{ range .Site.Taxonomies.categories }}

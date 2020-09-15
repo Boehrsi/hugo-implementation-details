@@ -9,7 +9,54 @@ A simple theme for documentation and best practices websites for the [Hugo stati
 - Use **Hugo extended** 
 - Clone the repository into your `themes` directory in your Hugo project
 - Activate the theme in the config file (e.g. `config.toml`) of your Hugo project
-- You are ready to use it, no configuration or further setup is required
+
+### Configure the theme (optional)
+
+The following variables can be set in the projects config file (`config.[yaml|toml|json]`). If a variable is not set, the given entry won't be shown.
+
+```
+[params]
+    github = "YourGitHubLink"
+    imprint = "YourImprintLink"
+```
+
+### Setup your favicon (optional)
+
+Add the following files to your project. If a file is missing the theme will just skip it.
+
+- static\favicon.ico
+- static\icons\android-chrome-192x192.png
+- static\icons\android-chrome-512x512.png
+- static\icons\apple-touch-icon.png
+- static\icons\favicon-16x16.png
+- static\icons\favicon-32x32.png
+- static\icons\favicon.ico
+- static\icons\site.webmanifest
+
+The `site.webmanifest` should be similar to the following snippet.
+
+```
+{
+    "name": "",
+    "short_name": "",
+    "icons": [
+        {
+            "src": "icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
+```
+
 
 ## How to use
 
