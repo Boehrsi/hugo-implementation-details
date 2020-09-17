@@ -8,14 +8,14 @@
 {{ $webmanifest := "icons/site.webmanifest" }}
 
 {{- if fileExists (printf "static/%s" $appleTouchIcon) }}
-    <link rel="apple-touch-icon" sizes="180x180" href="{{$appleTouchIcon}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}/{{$appleTouchIcon}}">
 {{ end }}
 {{ if fileExists (printf "static/%s" $favicon16) }}
-    <link rel="icon" type="image/png" sizes="16x16" href="{{$favicon16}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}/{{$favicon16}}">
 {{ end }}
 {{ if fileExists (printf "static/%s" $favicon32) }}
-    <link rel="icon" type="image/png" sizes="32x32" href="{{$favicon32}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}/{{$favicon32}}">
 {{ end }}
 {{ if fileExists (printf "static/%s" $webmanifest) }}
-    <link rel="manifest" href="{{$webmanifest}}">
+    <link rel="manifest" href="{{ .Site.BaseURL }}/{{$webmanifest}}">
 {{ end }}
