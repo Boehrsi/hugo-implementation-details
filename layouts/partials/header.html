@@ -8,12 +8,16 @@
     <li><a href="{{ .Site.BaseURL }}/about">About</a></li>
     <li><a href="{{ .Site.BaseURL }}/contribute">Contribute</a></li>
     {{ with .Site.Params.github }}
-      <li><a href="{{.}}">View on GitHub</a></li>
+    <li><a href="{{.}}">View on GitHub</a></li>
     {{ end }}
     <li class="toggled"><a href="#">Imprint</a></li>
-    <li class="category-header">Categories</li>
+    <li class="category-header">
+      <div class="divider-centered"></div>
+      <div class="category-header-text">Categories</div>
+      <div class="divider-centered"></div>
+    </li>
     {{ range .Site.Taxonomies.categories }}
-      <li class="category-entry"><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+    <li class="category-entry"><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
     {{ end }}
   </ul>
 </nav>

@@ -233,6 +233,12 @@ footer {
   border-bottom: 4px solid $color_primary;
 }
 
+.divider-centered {
+  flex: 1;
+  height: 1px;
+  background-color: $color_divider;
+}
+
 .area-header {
   margin-top: 50px;
   margin-bottom: 10px;
@@ -438,9 +444,13 @@ footer {
     }
 
     .category-header {
-      display: block;
+      display: flex;
+      align-items: center;
       color: $color_divider;
-      border-top: 1px solid $color_divider;
+    }
+
+    .category-header-text {
+      padding: 0px 20px;
     }
 
     .category-entry {
